@@ -1,0 +1,11 @@
+﻿data/userid-timestamp-artid-artname-traid-traname.tsv
+data/enriched_scrobbles.csv
+data/sessions.csv
+data/session_arcs.csv
+data/session_arcs_clustered.csv
+data/SpotifyAudioFeaturesNov2018.csv
+__pycache__/
+*.pyc
+mlruns/
+.env
+plots/
