@@ -2,6 +2,8 @@
 
 A production-grade music recommendation system that models how listening sessions evolve emotionally over time — and recommends the next track based on *where the mood is heading*, not just what was played.
 
+Link: https://bsrivaishnavi-session-aware-recommender.hf.space/
+
 ## What makes this different
 
 Most recommender systems ask: *"what did users like?"*  
