@@ -6,6 +6,7 @@ Run: streamlit run app.py
 """
 
 import streamlit as st
+import time
 import requests
 import pandas as pd
 import plotly.graph_objects as go
@@ -69,6 +70,31 @@ with col5:
 
 seed_tracks = [t for t in [track1, track2, track3, track4, track5] if t.strip()]
 
+
+
+
+st.info("💡 **P.S.** Mood trajectories may vary for common song names (e.g. 'Intro', 'Home') since multiple artists share the same title. For consistent results, use the suggested tracks below.")
+
+# ── Song Suggestions ──────────────────────────────────────────────────
+st.divider()
+st.subheader("🎵 Not sure what to type? Try these:")
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.markdown("**Chill Descent**")
+    st.caption("Heartless · Angel · Breathe")
+    st.markdown("**Late Night Focus**")
+    st.caption("All I Need · Wonderwall · Run")
+with col2:
+    st.markdown("**Sunset Wind-down**")
+    st.caption("Love Lockdown · Closer · Hurt")
+    st.markdown("**Euphoric Build**")
+    st.caption("Crazy · Street Lights · Runaway")
+with col3:
+    st.markdown("**Party Arc**")
+    st.caption("Heartbeat · Get Back · Star")
+    st.markdown("**Emotional Journey**")
+    st.caption("I Want You · Hunter · Lost")
+
 recommend_btn = st.button("🎵 Generate Playlist", type="primary", use_container_width=True)
 
 # ── API Call + Results ────────────────────────────────────────────────────────
@@ -76,8 +102,9 @@ if recommend_btn:
     if len(seed_tracks) < 1:
         st.warning("Please enter at least 1 seed track.")
     else:
-        with st.spinner("Predicting your mood arc and generating recommendations..."):
+        with st.spinner("🎵 Predicting your mood arc and generating recommendations..."):
             try:
+                time.sleep(1.5)
                 resp = requests.post(f"{API_URL}/recommend", json={
                     "seed_tracks": seed_tracks,
                     "user":        user if user else None,
