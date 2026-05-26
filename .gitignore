@@ -9,3 +9,6 @@ __pycache__/
 mlruns/
 .env
 plots/
+"hf_deploy/" 
+"mlflow.db" 
+".ipynb_checkpoints/" 
