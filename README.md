@@ -107,7 +107,7 @@ streamlit run app.py
 | Experiment tracking | MLflow |
 | Frontend | Streamlit + Plotly |
 
-## Resume bullets (fill in your actual numbers)
+## Summary
 
 - Built a session-aware music recommender over **80K real Last.fm listening sessions**, modeling emotional mood trajectories using Spotify audio features (valence, energy, danceability)
 - Designed a novel **Mood Coherence Score** evaluation metric measuring trajectory alignment of recommendations, achieving **0.74 cosine similarity** vs 0.51 for a popularity baseline
